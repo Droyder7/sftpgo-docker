@@ -1,0 +1,20 @@
+{
+  "httpd": {
+    "bindings": [
+      {
+        "port": 8080,
+        "enable_web_admin": true,
+        "enable_web_client": false,
+        "security": {
+          "enabled": false
+        },
+        "proxy_allowed": ["0.0.0.0/0"],
+        "client_ip_proxy_header": "X-Forwarded-For"
+      }
+    ]
+  },
+  "data_provider": {
+    "driver": "sqlite",
+    "name": "/tmp/sftpgo.db"
+  }
+}
